@@ -1,9 +1,24 @@
 <html>
+
 <head>
-  <title>Django blog --localhost</title>
+  <title>Django blog</title>
 </head>
+
+<body>
 
   <h1>
     yo!
   </h1>
+
+  {% for post in posts %}
+    <div>
+      <div><a href="">{{post.title}}</a></div>
+      <br />
+      <div>{{ post.published_date }}</div>
+      <div>{{ post.text|linebreaks }}</div>
+    </div>
+  {% endfor %}
+
+</body>
+
 </html>
